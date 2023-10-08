@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jn.test.mapper.CaseInfoMapper">
+    <resultMap id="caseInfoMap" type="com.jn.test.bean.CaseInfo">
+        <id property="caseNo" column="vc_case_no"></id>
+        <result property="caseTitle" column="vc_case_title"></result>
+        <result property="apiMethod" column="vc_case_title"></result>
+        <result property="apiHeader" column="vc_api_header"></result>
+        <result property="apiUrl" column="vc_api_url"></result>
+        <result property="inputInfo" column="vc_input_info"></result>
+        <result property="expected" column="vc_expected"></result>
+        <result property="checked" column="vc_checked"></result>
+    </resultMap>
+    <!--CaseInfo getCaseInfoById(@Param("caseNo") String caseNo);-->
+    <select id="getCaseInfoById" resultMap="caseInfoMap">
+        select * from t_case where vc_case_no = #{caseNo}
+    </select>
+    
+    
+    <select id="getCaseInfo" resultMap="caseInfoMap">
+        select * from t_case where vc_case_no = '0001'
+    </select>
+</mapper>

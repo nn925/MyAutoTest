@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="0001">
+    <test name="第一个测试demo">
+        <classes>
+            <class name="com.jn.test.cases.BaseTest"/>
+        </classes>
+    </test>
+</suite>
